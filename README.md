@@ -4,5 +4,4 @@ The <code>install</code> command installs exactly the dependencies that were in 
 The command <code>brain-games</code> launches an interpreter that reads the specified JS file and executes its code outside the browser.<br>
 The <code>publish</code> command simulates the publishing process without actually sending it to the NPM registry. This is necessary to ensure that files that shouldn't be included in the NPM package aren't included.<br>
 <br>
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=edikdevtech_frontend-project-44&metric=alert_status)][def]
-[def]: https://sonarcloud.io/summary/new_code?id=edikdevtech_frontend-project-44
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=edikdevtech_frontend-project-44&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=edikdevtech_frontend-project-44)
