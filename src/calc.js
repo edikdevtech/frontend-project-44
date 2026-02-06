@@ -25,7 +25,7 @@ export default function gameCalc() {
       resultQuestion = randomNumber1 * randomNumber2
     }
 
-    const answer = parseInt(readlineSync.question('Your answer: '))
+    const answer = Number.parseInt(readlineSync.question('Your answer: '))
 
     if (answer === resultQuestion) {
       console.log('Correct!')
