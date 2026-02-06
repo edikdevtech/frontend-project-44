@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import hiUser from '../src/cli.js'
-import resultCalc from '../src/calc.js'
+import gameCalc from '../src/calc.js'
 
 hiUser()
-resultCalc()
+gameCalc()
