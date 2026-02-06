@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync'
 import { nameUser } from '../src/cli.js'
 import { numberOfQuestionsInGame } from '../src/index.js'
 
-export default () => {
+export default function evenGame() {
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
 
   for (let i = 1; i <= numberOfQuestionsInGame; i++) {

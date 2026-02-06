@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync'
 import { nameUser } from '../src/cli.js'
 import { numberOfQuestionsInGame } from '../src/index.js'
 
-export default () => {
+export default function gameCalc() {
   console.log('What is the result of the expression?')
 
   for (let i = 1; i <= numberOfQuestionsInGame; i++) {

@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync'
 import { nameUser } from '../src/cli.js'
 import { numberOfQuestionsInGame } from '../src/index.js'
 
-export default () => {
+export default function gameGcd() {
   console.log('Find the greatest common divisor of given numbers.')
 
   for (let i = 1; i <= numberOfQuestionsInGame; i++) {
@@ -10,7 +10,7 @@ export default () => {
     let randomNumber2 = Math.round(Math.random() * 100) + 1
 
     console.log(`Question ${randomNumber1} ${randomNumber2}`)
-    const answer = parseInt(readlineSync.question('Your answer: '))
+    const answer = Number.parseInt(readlineSync.question('Your answer: '))
     let resultArr = []
 
     for (let i = 1; i <= randomNumber1; i++) {
