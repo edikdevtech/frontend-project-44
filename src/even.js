@@ -19,19 +19,11 @@ export default function evenGame() {
         console.log('Correct!')
       }
       else if (answer === false) {
-        console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${nameUser}`)
+        console.log(`Answer 'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${nameUser}`)
         break
       }
     }
-    else {
-      if (answer === false) {
-        console.log('Correct!')
-      }
-      else if (answer === true) {
-        console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${nameUser}!`)
-        break
-      }
-    }
+
     if (i === numberOfQuestionsInGame) {
       console.log(`Congratulations, ${nameUser}!`)
     }
