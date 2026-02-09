@@ -9,7 +9,7 @@ export default function progression() {
     const lengthProgression = Math.round(Math.random() * 10) + 10
     const missingElementProgression = Math.round(Math.random() * 10) + 3
     const startElementProgression = Math.round(Math.random() * 10) + 1
-    let stepProgression = Math.round(Math.random() * 10) + 1
+    const stepProgression = Math.round(Math.random() * 10) + 1
     let elementProgression
     let elementProgressionAuthor
     let allProgressionArrUser = []

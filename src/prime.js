@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync'
 import { nameUser } from '../src/cli.js'
 import { numberOfQuestionsInGame } from '../src/index.js'
+import isPrimeNumber from '../src/index.js'
 
 export default function gamePrime() {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
@@ -14,19 +15,6 @@ export default function gamePrime() {
       trueValue: ['yes'],
       falseValue: ['no'],
     })
-
-    function isPrimeNumber(num) {
-      if (num < 2) return false
-      if (num === 2) return true
-      if (num % 2 === 0) return false
-
-      for (let i = 3; i <= Math.sqrt(num); i += 2) {
-        if (num % i === 0) {
-          return false
-        }
-      }
-      return true
-    }
 
     if (isPrimeNumber(randomNumber) === answer) {
       console.log('Correct!')
