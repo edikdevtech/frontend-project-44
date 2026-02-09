@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync'
 import { nameUser } from '../src/cli.js'
-import { numberOfQuestionsInGame } from '../src/index.js'
-import isPrimeNumber from '../src/index.js'
+import { numberOfQuestionsInGame, isPrimeNumber } from '../src/index.js'
 
 export default function gamePrime() {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".')

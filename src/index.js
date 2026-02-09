@@ -1,6 +1,6 @@
 export const numberOfQuestionsInGame = 3
 
-export default function isPrimeNumber(num) {
+export function isPrimeNumber(num) {
   if (num < 2) return false
   if (num === 2) return true
   if (num % 2 === 0) return false
