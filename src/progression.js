@@ -10,7 +10,7 @@ export default function progression() {
     const missingElementProgression = Math.round(Math.random() * 10) + 3
     const startElementProgression = Math.round(Math.random() * 10) + 1
     const stepProgression = Math.round(Math.random() * 10) + 1
-    let elementProgression
+    let elementProgressionUser
     let elementProgressionAuthor
     let allProgressionArrUser = []
     let allProgressionArrAuthor = []
@@ -18,9 +18,9 @@ export default function progression() {
     let strElementProgration = ''
 
     for (let i = 0; i < lengthProgression; i++) {
-      missingElementProgression === i ? (elementProgression = emptyElementProgression) : (elementProgression = startElementProgression + i * stepProgression)
+      missingElementProgression === i ? (elementProgressionUser = emptyElementProgression) : (elementProgressionUser = startElementProgression + i * stepProgression)
       elementProgressionAuthor = startElementProgression + i * stepProgression
-      allProgressionArrUser.push(elementProgression)
+      allProgressionArrUser.push(elementProgressionUser)
       allProgressionArrAuthor.push(elementProgressionAuthor)
     }
 
