@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync'
-import { nameUser } from '../src/cli.js'
+import getNameUser from '../src/cli.js'
 import { numberOfQuestionsInGame } from '../src/index.js'
 
 export default function gameCalc() {
@@ -31,12 +31,12 @@ export default function gameCalc() {
       console.log('Correct!')
     }
     else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${resultQuestion}".\nLet's try again, ${nameUser}`)
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${resultQuestion}".\nLet's try again, ${getNameUser()}`)
       break
     }
 
     if (i === numberOfQuestionsInGame) {
-      console.log(`Congratulations, ${nameUser}!`)
+      console.log(`Congratulations, ${getNameUser()}!`)
     }
   }
 }

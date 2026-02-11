@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync'
-import { nameUser } from '../src/cli.js'
+import getNameUser from '../src/cli.js'
 import { numberOfQuestionsInGame } from '../src/index.js'
 
 export default function evenGame() {
@@ -19,13 +19,13 @@ export default function evenGame() {
         console.log('Correct!')
       }
       else if (answer === false) {
-        console.log(`Answer 'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${nameUser}`)
+        console.log(`Answer 'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${getNameUser()}`)
         break
       }
     }
 
     if (i === numberOfQuestionsInGame) {
-      console.log(`Congratulations, ${nameUser}!`)
+      console.log(`Congratulations, ${getNameUser()}!`)
     }
   }
 }
