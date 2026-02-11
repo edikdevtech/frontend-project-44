@@ -7,4 +7,6 @@ export default function hiUser() {
   console.log(`Hello, ${nameUser}!`)
 }
 
-export { nameUser }
+export function getNameUser() {
+  return nameUser
+}
