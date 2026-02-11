@@ -12,3 +12,33 @@ export function isPrimeNumber(num) {
   }
   return true
 }
+
+export function findNod(a, b) {
+  let bigNum = Math.max(a, b)
+  let smallNum = Math.min(a, b)
+
+  while (smallNum !== 0) {
+    if (bigNum % smallNum === 0) {
+      return smallNum
+    }
+    else {
+      let temp = smallNum
+      smallNum = bigNum % smallNum
+      bigNum = temp
+    }
+  }
+  return bigNum
+}
+
+export function progressionCode(start, step, length, empty, array) {
+  let resultArrUser = []
+
+  if (length > 10) {
+    length = 10
+  }
+
+  for (let i = 0; i < length; i++) {
+    i === empty ? (resultArrUser.push('..'), array.push(start + i * step)) : resultArrUser.push(start + i * step)
+  }
+  return resultArrUser.join(', ')
+}
