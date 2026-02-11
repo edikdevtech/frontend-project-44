@@ -1,8 +1,10 @@
 import readlineSync from 'readline-sync'
 
-export let nameUser = ''
+let nameUser = ''
 export default function hiUser() {
   console.log('Welcome to the Brain Games!')
   nameUser = readlineSync.question('May I have your name? ')
   console.log(`Hello, ${nameUser}!`)
 }
+
+export { nameUser }
