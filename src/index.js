@@ -33,9 +33,9 @@ export function findNod(a, b) {
 export function progressionCode(start, step, length, empty, array) {
   let resultArrUser = []
 
-  length = length > 10 ? 10 : length
+  const lengthProgression = Math.min(length, 10)
 
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i < lengthProgression; i++) {
     if (i === empty) {
       resultArrUser.push('..')
       array.push(start + i * step)
