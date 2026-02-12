@@ -6,7 +6,7 @@ export default function gamePrime() {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
 
   for (let i = 1; i <= numberOfQuestionsInGame; i++) {
-    const randomNumber = Math.round(Math.random() * 10) + 1
+    const randomNumber = Math.floor(Math.random() * 10) + 1
 
     console.log(`Question: ${randomNumber}`)
     const answer = readlineSync.question('Your answer: ', {

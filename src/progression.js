@@ -6,10 +6,10 @@ export default function progression() {
   console.log('What number is missing in the progression?')
 
   for (let i = 1; i <= numberOfQuestionsInGame; i++) {
-    let startNum = Math.round(Math.random() * 10) + 1
-    let stepNum = Math.round(Math.random() * 10) + 1
-    let lengthNum = Math.round(Math.random() * 10) + 10
-    let emptyNum = Math.round(Math.random() * 10)
+    let startNum = Math.floor(Math.random() * 10) + 1
+    let stepNum = Math.floor(Math.random() * 10) + 1
+    let lengthNum = Math.floor(Math.random() * 10) + 10
+    let emptyNum = Math.floor(Math.random() * 10)
     let resultArrAuthor = []
 
     console.log(`Question: ${progressionCode(startNum, stepNum, lengthNum, emptyNum, resultArrAuthor)}`)

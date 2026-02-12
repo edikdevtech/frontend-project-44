@@ -6,7 +6,7 @@ export default function evenGame() {
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
 
   for (let i = 1; i <= numberOfQuestionsInGame; i++) {
-    let randomNumber = Math.round(Math.random() * 100) + 1
+    let randomNumber = Math.floor(Math.random() * 100) + 1
     console.log(`Question: ${randomNumber}`)
     const answer = readlineSync.question('Your answer: ', {
       limit: ['yes', 'no'],

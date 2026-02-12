@@ -6,8 +6,8 @@ export default function gameCalc() {
   console.log('What is the result of the expression?')
 
   for (let i = 1; i <= numberOfQuestionsInGame; i++) {
-    let randomNumber1 = Math.round(Math.random() * 10)
-    let randomNumber2 = Math.round(Math.random() * 10)
+    let randomNumber1 = Math.floor(Math.random() * 10)
+    let randomNumber2 = Math.floor(Math.random() * 10)
     const calculationOperators = ['-', '+', '*']
     const randomOperator = calculationOperators[Math.floor(Math.random() * calculationOperators.length)]
 
