@@ -10,31 +10,26 @@ export default function evenGame() {
     console.log(`Question: ${randomNumber}`)
     const answer = readlineSync.question('Your answer: ', {
       limit: ['yes', 'no'],
-      trueValue: ['yes'],
-      falseValue: ['no'],
+      trueValue: 'yes',
+      falseValue: 'no',
     })
 
-    if (randomNumber % 2 === 0) {
-      if (answer === true) {
-        console.log('Correct!')
-      }
-      else {
-        console.log(`Answer 'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${getNameUser()}`)
-        break
+    const isEven = randomNumber % 2 === 0
+    const isCorrect = isEven ? answer === true : answer === false
+
+    if (isCorrect) {
+      console.log('Correct!')
+
+      if (i === numberOfQuestionsInGame) {
+        console.log(`Congratulations, ${getNameUser()}!`)
       }
     }
     else {
-      if (answer === false) {
-        console.log('Correct!')
-      }
-      else {
-        console.log(`Answer 'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${getNameUser()}`)
-        break
-      }
-    }
+      const correctAnswer = isEven ? 'yes' : 'no'
+      const userAnswer = answer ? 'yes' : 'no'
 
-    if (i === numberOfQuestionsInGame) {
-      console.log(`Congratulations, ${getNameUser()}!`)
+      console.log(`Answer ${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${getNameUser()}`)
+      return
     }
   }
 }
