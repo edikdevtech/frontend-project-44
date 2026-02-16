@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync'
-import getNameUser from '../src/cli.js'
+import { getNameUser } from '../src/cli.js'
 import { numberOfQuestionsInGame, progressionCode } from '../src/index.js'
 
 export default function progression() {
