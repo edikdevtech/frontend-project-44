@@ -44,5 +44,6 @@ export function progressionCode(start, step, length, empty, array) {
       resultArrUser.push(start + i * step)
     }
   }
+  array.join(', ')
   return resultArrUser.join(', ')
 }
