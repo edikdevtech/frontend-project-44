@@ -31,7 +31,7 @@ export default function gameCalc() {
       console.log('Correct!')
     }
     else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${resultQuestion}".\nLet's try again, ${getNameUser()}`)
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${resultQuestion}".\nLet's try again, ${getNameUser()}!`)
       break
     }
 

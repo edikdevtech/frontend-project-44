@@ -18,7 +18,7 @@ export default function gameGcd() {
       console.log('Correct!')
     }
     else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${nod}".\nLet's try again, ${getNameUser()}`)
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${nod}".\nLet's try again, ${getNameUser()}!`)
       break
     }
 

@@ -28,7 +28,7 @@ export default function evenGame() {
       const correctAnswer = isEven ? 'yes' : 'no'
       const userAnswer = answer ? 'yes' : 'no'
 
-      console.log(`Answer ${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${getNameUser()}`)
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${getNameUser()}!`)
       return
     }
   }
