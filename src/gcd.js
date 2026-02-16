@@ -9,7 +9,7 @@ export default function gameGcd() {
     let randomNumber1 = Math.floor(Math.random() * 100) + 1
     let randomNumber2 = Math.floor(Math.random() * 100) + 1
 
-    console.log(`Question ${randomNumber1} ${randomNumber2}`)
+    console.log(`Question: ${randomNumber1} ${randomNumber2}`)
     const answer = Number.parseInt(readlineSync.question('Your answer: '))
 
     let nod = findNod(randomNumber1, randomNumber2)
