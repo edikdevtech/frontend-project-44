@@ -4,7 +4,7 @@
 The <code>install</code> command installs exactly the dependencies that were in the project initially, while deleting the node_modules directory.<br>
 <hr>
 <br>
-The command <code>brain-games</code>, <code>brain-even</code>, <code>brain-calc</code> launches an interpreter that reads the specified JS file and executes its code outside the browser.
+The command <code>brain-games</code>, <code>brain-even</code>, <code>brain-calc</code>, <code>brain-gcd</code>, <code>brain-progression</code>, <code>brain-prime</code> launches an interpreter that reads the specified JS file and executes its code outside the browser.
 <br>
 <hr>
 <br>
