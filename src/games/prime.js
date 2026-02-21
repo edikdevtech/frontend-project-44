@@ -1,30 +1,35 @@
-import readlineSync from 'readline-sync'
-import { getNameUser } from '../src/cli.js'
-import { numberOfQuestionsInGame, isPrimeNumber } from '../src/index.js'
+import hiUser from '../cli.js'
+import makeRound from '../index.js'
+import getRandomRange from '../getRandomRange.js'
 
-export default function gamePrime() {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
+const textQuestionPrime = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
-  for (let i = 1; i <= numberOfQuestionsInGame; i++) {
-    const randomNumber = Math.floor(Math.random() * 10) + 1
+hiUser()
 
-    console.log(`Question: ${randomNumber}`)
-    const answer = readlineSync.question('Your answer: ', {
-      limit: ['yes', 'no'],
-      trueValue: ['yes'],
-      falseValue: ['no'],
-    })
+export function isPrimeNumber(num) {
+  if (num < 2) return false
+  if (num === 2) return true
+  if (num % 2 === 0) return false
 
-    if (isPrimeNumber(randomNumber) === answer) {
-      console.log('Correct!')
-    }
-    else {
-      console.log(`Answer "no" is wrong answer ;(. Correct answer was "yes".\nLet's try again, ${getNameUser()}!`)
-      break
-    }
-
-    if (i === numberOfQuestionsInGame) {
-      console.log(`Congratulations, ${getNameUser()}!`)
+  for (let i = 3; i <= Math.sqrt(num); i += 2) {
+    if (num % i === 0) {
+      return false
     }
   }
+  return true
+}
+
+function generationRoundGamуPrime() {
+  const randomNumber = getRandomRange(1, 99)
+
+  const isRandomNumberPrime = isPrimeNumber(randomNumber) ? 'yes' : 'no'
+
+  return {
+    question: randomNumber,
+    correсtAnswer: isRandomNumberPrime
+  }
+}
+
+export default function primeGame() {
+  makeRound(generationRoundGamуPrime, textQuestionPrime)
 }

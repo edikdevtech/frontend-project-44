@@ -8,7 +8,7 @@ hiUser()
 
 function generationRoundGameCalc() {
   let randomNumber1 = getRandomRange(1, 100)
-  let randomNumber2 = getRandomRange(1, 100)
+  let randomNumber2 = getRandomRange(1, 10)
   const calculationOperators = ['-', '+', '*']
   const randomOperator = calculationOperators[getRandomRange(0, 2)]
   const expressionWithRandomVariables = `${randomNumber1} ${randomOperator} ${randomNumber2}`
