@@ -1,48 +1,74 @@
-export const numberOfQuestionsInGame = 3
+import readlineSync from 'readline-sync'
+import { getNameUser } from '../src/cli.js'
 
-export function isPrimeNumber(num) {
-  if (num < 2) return false
-  if (num === 2) return true
-  if (num % 2 === 0) return false
+export default function makeRound(generationRound, descriptionTextGame) {
+  const numberOfQuestionsInGame = 3
+  const userName = getNameUser()
+  console.log(descriptionTextGame)
 
-  for (let i = 3; i <= Math.sqrt(num); i += 2) {
-    if (num % i === 0) {
-      return false
-    }
-  }
-  return true
-}
+  for (let i = 0; i < numberOfQuestionsInGame; i++) {
+    const round = generationRound()
 
-export function findNod(a, b) {
-  let bigNum = Math.max(a, b)
-  let smallNum = Math.min(a, b)
+    const question = round.question
+    const correctAnswer = round.correсtAnswer
 
-  while (smallNum !== 0) {
-    if (bigNum % smallNum === 0) {
-      return smallNum
+    console.log(`Question: ${question}`)
+    const userAnswer = readlineSync.question('Your answer: ')
+    if(correctAnswer === userAnswer) {
+      console.log('Correct!')
     }
     else {
-      let temp = smallNum
-      smallNum = bigNum % smallNum
-      bigNum = temp
+      console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${userName}!`)
+
+      return
     }
   }
-  return bigNum
+  console.log(`Congratulations, ${userName}!`)
 }
 
-export function progressionCode(start, step, length, empty, array) {
-  let resultArrUser = []
+// export function isPrimeNumber(num) {
+//   if (num < 2) return false
+//   if (num === 2) return true
+//   if (num % 2 === 0) return false
 
-  const lengthProgression = Math.min(length, 10)
+//   for (let i = 3; i <= Math.sqrt(num); i += 2) {
+//     if (num % i === 0) {
+//       return false
+//     }
+//   }
+//   return true
+// }
 
-  for (let i = 0; i < lengthProgression; i++) {
-    if (i === empty) {
-      resultArrUser.push('..')
-      array.push(start + i * step)
-    }
-    else {
-      resultArrUser.push(start + i * step)
-    }
-  }
-  return resultArrUser.join(' ')
-}
+// export function findNod(a, b) {
+//   let bigNum = Math.max(a, b)
+//   let smallNum = Math.min(a, b)
+
+//   while (smallNum !== 0) {
+//     if (bigNum % smallNum === 0) {
+//       return smallNum
+//     }
+//     else {
+//       let temp = smallNum
+//       smallNum = bigNum % smallNum
+//       bigNum = temp
+//     }
+//   }
+//   return bigNum
+// }
+
+// export function progressionCode(start, step, length, empty, array) {
+//   let resultArrUser = []
+
+//   const lengthProgression = Math.min(length, 10)
+
+//   for (let i = 0; i < lengthProgression; i++) {
+//     if (i === empty) {
+//       resultArrUser.push('..')
+//       array.push(start + i * step)
+//     }
+//     else {
+//       resultArrUser.push(start + i * step)
+//     }
+//   }
+//   return resultArrUser.join(' ')
+// }
