@@ -33,11 +33,10 @@ function generationRoundGameGcd() {
 
   return {
     question: expressionWithRandomVariables,
-    correсtAnswer: String(nodOfTwoNumbers)
+    correсtAnswer: String(nodOfTwoNumbers),
   }
 }
 
 export default function gameGcd() {
   makeRound(generationRoundGameGcd, textQuestionGcd)
 }
-

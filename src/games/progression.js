@@ -17,7 +17,7 @@ function progressionCode(start, step, empty) {
 
   return {
     arrayProgressionResult: arrayProgression.join(' '),
-    emptyNumberProgression: String(emptyNumber)
+    emptyNumberProgression: String(emptyNumber),
   }
 }
 
@@ -29,11 +29,10 @@ function generationRoundGameProgression() {
   const resultRound = progressionCode(startNum, stepNum, emptyNum)
   const arrayProgressionResult = resultRound.arrayProgressionResult
   const emptyNumberProgression = resultRound.emptyNumberProgression
-  
 
   return {
-    question: arrayProgressionResult, 
-    correсtAnswer: emptyNumberProgression
+    question: arrayProgressionResult,
+    correсtAnswer: emptyNumberProgression,
   }
 }
 

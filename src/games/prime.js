@@ -26,7 +26,7 @@ function generationRoundGamуPrime() {
 
   return {
     question: randomNumber,
-    correсtAnswer: isRandomNumberPrime
+    correсtAnswer: isRandomNumberPrime,
   }
 }
 

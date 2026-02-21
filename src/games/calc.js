@@ -27,11 +27,10 @@ function generationRoundGameCalc() {
 
   return {
     question: expressionWithRandomVariables,
-    correсtAnswer: String(resultQuestion)
+    correсtAnswer: String(resultQuestion),
   }
 }
 
 export default function gameCalc() {
   makeRound(generationRoundGameCalc, textQuestionCalc)
 }
-

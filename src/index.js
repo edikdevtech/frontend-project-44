@@ -16,7 +16,7 @@ export default function makeRound(generationRound, descriptionTextGame) {
 
     const userAnswer = readlineSync.question('Your answer: ')
 
-    if(correctAnswer === userAnswer) {
+    if (correctAnswer === userAnswer) {
       console.log('Correct!')
     }
     else {
