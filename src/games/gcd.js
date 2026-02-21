@@ -1,29 +1,43 @@
-import readlineSync from 'readline-sync'
-import { getNameUser } from '../src/cli.js'
-import { numberOfQuestionsInGame, findNod } from '../src/index.js'
+import hiUser from '../cli.js'
+import makeRound from '../index.js'
+import getRandomRange from '../getRandomRange.js'
 
-export default function gameGcd() {
-  console.log('Find the greatest common divisor of given numbers.')
+const textQuestionGcd = 'Find the greatest common divisor of given numbers.'
 
-  for (let i = 1; i <= numberOfQuestionsInGame; i++) {
-    let randomNumber1 = Math.floor(Math.random() * 100) + 1
-    let randomNumber2 = Math.floor(Math.random() * 100) + 1
+hiUser()
 
-    console.log(`Question: ${randomNumber1} ${randomNumber2}`)
-    const answer = Number.parseInt(readlineSync.question('Your answer: '))
+function findNod(a, b) {
+  let bigNum = Math.max(a, b)
+  let smallNum = Math.min(a, b)
 
-    let nod = findNod(randomNumber1, randomNumber2)
-
-    if (answer === nod) {
-      console.log('Correct!')
+  while (smallNum !== 0) {
+    if (bigNum % smallNum === 0) {
+      return smallNum
     }
     else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${nod}".\nLet's try again, ${getNameUser()}!`)
-      break
-    }
-
-    if (i === numberOfQuestionsInGame) {
-      console.log(`Congratulations, ${getNameUser()}!`)
+      let temp = smallNum
+      smallNum = bigNum % smallNum
+      bigNum = temp
     }
   }
+  return bigNum
 }
+
+function generationRoundGameGcd() {
+  let randomNumber1 = getRandomRange(1, 100)
+  let randomNumber2 = getRandomRange(1, 100)
+
+  const nodOfTwoNumbers = findNod(randomNumber1, randomNumber2)
+
+  const expressionWithRandomVariables = `${randomNumber1} ${randomNumber2}`
+
+  return {
+    question: expressionWithRandomVariables,
+    correсtAnswer: String(nodOfTwoNumbers)
+  }
+}
+
+export default function gameGcd() {
+  makeRound(generationRoundGameGcd, textQuestionGcd)
+}
+
