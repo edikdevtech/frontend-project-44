@@ -13,7 +13,11 @@ export default function makeRound(generationRound, descriptionTextGame) {
     const correctAnswer = round.correсtAnswer
 
     console.log(`Question: ${question}`)
+
     const userAnswer = readlineSync.question('Your answer: ')
+
+    console.log(correctAnswer, userAnswer)
+    console.log(typeof(correctAnswer), typeof(userAnswer))
     if(correctAnswer === userAnswer) {
       console.log('Correct!')
     }
