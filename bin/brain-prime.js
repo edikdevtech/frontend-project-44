@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import hiUser from '../src/cli.js'
-import gamePrime from '../src/prime.js'
+import gamePrime from '../src/games/prime.js'
 
-hiUser()
 gamePrime()
